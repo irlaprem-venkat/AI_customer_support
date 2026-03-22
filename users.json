@@ -838,5 +838,11 @@
     "name": "Test User",
     "email": "flood-1774123680487-76-0.2579994711028606@test.com",
     "password": "$2b$12$mv.7v3QlWD05jgtuCE1wn.PoJmr1wlGJHbZUjSQpHNbgT9XP/7P8u"
+  },
+  {
+    "id": "1c4c5c78-9381-4acb-acb8-ca1bab672193",
+    "name": "Tester",
+    "email": "tester@example.com",
+    "password": "$2b$12$BsbXutV6FkSY5NRxNFfpYuaFYTdaQ6EZHERXn/sykbzuEvjeN6tCa"
   }
 ]
