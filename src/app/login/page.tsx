@@ -136,7 +136,7 @@ function LoginContent() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
+              onClick={() => signIn("github", { callbackUrl: `${window.location.origin}/dashboard` })}
               className="h-12 flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 text-white text-sm font-semibold hover:bg-white/10 transition-all group"
             >
               <Github className="w-5 h-5 group-hover:text-primary transition-colors" />
@@ -146,7 +146,7 @@ function LoginContent() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+              onClick={() => signIn("google", { callbackUrl: `${window.location.origin}/dashboard` })}
               className="h-12 flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 text-white text-sm font-semibold hover:bg-white/10 transition-all group"
             >
               <Chrome className="w-5 h-5 group-hover:text-primary transition-colors" />
