@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --primary: #00f2ff;
+  --secondary: #7000ff;
+  --accent: #ff00c8;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-glass: var(--glass);
+  --color-glass-border: var(--glass-border);
+  
+  --animate-pulse-cyan: pulse-cyan 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes pulse-cyan {
+    0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px var(--primary)); }
+    50% { opacity: .7; filter: drop-shadow(0 0 20px var(--primary)); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-morphism {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.neon-glow {
+  text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+}
+
+.neon-border {
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 10px var(--primary), inset 0 0 5px var(--primary);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
