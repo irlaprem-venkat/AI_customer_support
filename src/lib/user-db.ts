@@ -21,7 +21,11 @@ export const getUsers = (): User[] => {
 export const saveUser = (user: User) => {
   const users = getUsers();
   users.push(user);
-  fs.writeFileSync(DB_PATH, JSON.stringify(users, null, 2));
+  try {
+    fs.writeFileSync(DB_PATH, JSON.stringify(users, null, 2));
+  } catch (error) {
+    console.warn("Could not save user - file system may be read-only", error);
+  }
 };
 
 export const findUserByEmail = (email: string) => {
